@@ -30,10 +30,10 @@ def main():
     frame_min_t = 1 / MAX_FPS
     t = 0.0
     t_last = 0.0
-    time.clock()  # init clock
+    time.time()  # init clock
     while events(pygame.event.get()):
         t_last = t
-        t = time.clock()
+        t = time.time()
         update(t - t_last)
         draw()
 
