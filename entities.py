@@ -74,7 +74,7 @@ class Agent(pygame.sprite.Sprite):
         # agent picture
         r = AGENT_RADIUS
         self.surface = pygame.Surface((r*2, r*2), SRCALPHA).convert_alpha()
-        pygame.draw.circle(self.surface, (40, 40, 150), [r, r], r)
+        pygame.draw.circle(self.surface, AGENT_COLOR, [r, r], r)
         pygame.draw.line(self.surface, (150, 150, 150), [r-5, r], [r+5, r])
         pygame.draw.line(self.surface, (150, 150, 150), [r, r-5], [r, r+5])
         pygame.draw.polygon(self.surface, (150, 0, 0), [[r*2, r], [r*1.5, r-5], [r*1.5, r+5]])
@@ -161,7 +161,7 @@ class Obstacle(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.radius = r
         self.surface = pygame.Surface((r * 2, r * 2), SRCALPHA).convert_alpha()
-        pygame.draw.circle(self.surface, (50, 60, 70), [r, r], r)
+        pygame.draw.circle(self.surface, OBSTACLE_COLOR, [r, r], r)
         self.image = self.surface
         self.rect = self.surface.get_rect()
         self.rect.center = pos
